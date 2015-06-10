@@ -3558,6 +3558,11 @@ if ($sqlite) {
             start();
         }, 4000);
 
+        // heartbeat tests TODO
+        // 1) test ping not sent on initial page load, and sent if inactive for N secs.
+        // 2) test ping not sent on initial and not N secs after if tracking request sent in the meantime. test ping sent N secs after second tracking request if inactive.
+        // 3) test ping not sent N secs after, if window blur event triggered (ie tab switch) and N secs pass.
+        //    4) test ping sent immediately if tab switched and more than N secs pass, then tab switched back
     });
 
     <?php
